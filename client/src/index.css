@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #4ade80;
+  --primary-dark: #22c55e;
+  --secondary-color: #f97316;
+  --background-light: #f8fafc;
+  --text-dark: #1e293b;
+  --text-light: #64748b;
+  --white: #ffffff;
+  --error: #ef4444;
+  --success: #10b981;
+  --warning: #f59e0b;
+}
+
+body {
+  font-family: "Inter", "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  @apply text-slate-800 dark:text-slate-100 bg-slate-50 dark:bg-slate-950 transition-colors duration-300;
+}
+
+.glass {
+  @apply bg-white/70 dark:bg-slate-900/60 backdrop-blur-xl border border-white/40 dark:border-slate-800 shadow-2xl;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animate-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animate-delay-300 {
+  animation-delay: 300ms;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.form-input {
+  @apply w-full pr-3 py-2 border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white rounded-xl focus:outline-none focus:border-green-500 transition-all duration-300;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 ease-in-out;
+}
+
+.btn-primary {
+  @apply bg-green-500 text-white hover:bg-green-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50;
+}
+
+.btn-secondary {
+  @apply bg-orange-500 text-white hover:bg-orange-600 focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50;
+}
+
+.btn-outline {
+  @apply border border-green-500 text-green-500 hover:bg-green-500 hover:text-white focus:ring-2 focus:ring-green-500 focus:ring-opacity-50;
+}
+
+.btn-danger {
+  @apply bg-red-500 text-white hover:bg-red-600 focus:ring-2 focus:ring-red-500 focus:ring-opacity-50;
+}
+
+.card {
+  @apply bg-white dark:bg-slate-900 border-2 border-slate-100 dark:border-white/5 rounded-2xl shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-emerald-500/40 hover:-translate-y-1;
+}
+
+.badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.badge-green {
+  @apply bg-green-100 text-green-800;
+}
+
+.badge-orange {
+  @apply bg-orange-100 text-orange-800;
+}
+
+.badge-blue {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.badge-red {
+  @apply bg-red-100 text-red-800;
+}
+
+.loader {
+  @apply w-6 h-6 border-2 border-gray-200 border-t-green-500 rounded-full;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
